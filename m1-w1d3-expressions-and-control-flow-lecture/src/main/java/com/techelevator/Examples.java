@@ -56,23 +56,23 @@ public class Examples {
 		System.out.println("*************************");
 		System.out.println();
 		/*
-		 &  AND
-		 |  OR
+		 &&  AND
+		 ||  OR
 		 !  NOT
 		 ^  XOR  (exclusive OR)
 		 */
-		result = true & true;
+		result = true && true;
 		System.out.println("true & true : " + result);
-		result = true & false;
+		result = true && false;
 		System.out.println("true & false : " + result);
-		result = false & false;
+		result = false && false;
 		System.out.println("false & false : " + result);
 		
-		result = true | true;
+		result = true || true;
 		System.out.println("true | true : " + result);
-		result = true | false;
+		result = true || false;
 		System.out.println("true | false : " + result);
-		result = false | false;
+		result = false || false;
 		System.out.println("false | false : " + result);
 		
 		result = !true;
@@ -94,10 +94,10 @@ public class Examples {
 		System.out.println();
 		
 		int value = 100;
-		result = (value > 200) | (value < 500);
+		result = (value > 200) || (value < 500);
 		System.out.println("(value > 200) | (value < 500) : " + result);
 
-		result = (value > 200) & (value < 500);
+		result = (value > 200) && (value < 500);
 		System.out.println("(value > 200) & (value < 500) : " + result);
 
 		result = !(value >= 300);
