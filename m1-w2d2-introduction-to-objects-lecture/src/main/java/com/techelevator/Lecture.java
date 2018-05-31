@@ -5,6 +5,23 @@ public class Lecture {
 
 	public static void main(String[] args) {
 
+		char[] awesomeArray = new char[] { 'A', 'w', 'e', 's','o','m','e' };
+		String awesomeString = new String(awesomeArray);
+		
+		System.out.println(awesomeString);
+	
+	
+		
+		String s1 = "Hello";
+		String s2 = "Hello";		
+		String s3 = s1;
+
+		System.out.println("s1.equals(s2): " + s1.equals(s2));
+		
+		if (!s1.equals("Hello")) {
+			System.out.println("They're the same");
+		}
+		
 		System.out.println("************************************");
 		System.out.println("****** MAKING A STRING OBJECT ******");
 		System.out.println("************************************");
