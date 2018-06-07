@@ -36,4 +36,8 @@ public class Auction {
 	public String getItemForSale() {
 		return itemForSale;
 	}
+	
+	protected int getNumber() {
+		return 10;
+	}
 }
