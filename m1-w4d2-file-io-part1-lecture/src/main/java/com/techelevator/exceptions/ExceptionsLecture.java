@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ExceptionsLecture {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
 		Scanner scan = new Scanner(System.in);
 		
 		/* By default, when an Exception is thrown, it will "bubble up" through the call stack until
@@ -19,11 +19,18 @@ public class ExceptionsLecture {
 			System.out.println(cities[0]);
 			System.out.println(cities[1]);
 			System.out.println(cities[2]);
-			System.out.println(cities[3]);  // This statement will throw an ArrayIndexOutOfBoundsException
+			//System.out.println(cities[3]);  // This statement will throw an ArrayIndexOutOfBoundsException
 			System.out.println("are all in Ohio."); // This line won't execute because the previous statement throws an Exception
 		} catch(ArrayIndexOutOfBoundsException e) {
 			// Flow of control resumes here after the Exception is thrown
 			System.out.println("XXX   Uh-oh, something went wrong...   XXX");
+		} catch (NullPointerException e) {
+			
+			System.out.println(e.getMessage());
+		} catch (Exception e) {
+			System.out.println("Exception");
+		} finally {
+			System.out.println("Always runs");
 		}
 		
 		System.out.println();
@@ -71,8 +78,10 @@ public class ExceptionsLecture {
 		double currentBalance = 250;
 		double amountToWithdraw = 300;
 		try {
+
 			double newBalance = withdraw(currentBalance, amountToWithdraw);
 			System.out.println("new balance is "+newBalance);
+
 		} catch(OverdraftException e) {
 			System.out.println("Unfortunately, you can't withdraw more money than you have in the bank...");
 			System.out.println("The requested amount would overdraw the account by "+e.getOverdraftAmount());
@@ -121,12 +130,14 @@ public class ExceptionsLecture {
 	/* OverdraftException is a "checked exception" (i.e. it is a subclass of java.lang.Exception)
 	 * so we need to either catch it or declare that it is thrown.  This method declares that 
 	 * it can throw an OverdraftException using the "throws" keyword */
-	public static double withdraw(double currentBalance, double amountToWithdraw) throws OverdraftException {
+	public static double withdraw(double currentBalance, double amountToWithdraw) throws OverdraftException   {
 		double newBalance;
 		if(amountToWithdraw <= currentBalance) {
 			newBalance = currentBalance - amountToWithdraw;
 		} else {
+
 			throw new OverdraftException("The requested withdrawal amount is greater than the current balance", Math.abs(currentBalance - amountToWithdraw));
+
 		}
 		return newBalance;		
 	}
