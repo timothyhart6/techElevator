@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selectors</title>
+  <link href="external-stylesheet.css" rel="stylesheet" />
+  <style type="text/css">
+    /* p {
+        color: #000;
+    } */
+  </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="example">
+            <p style="color: red;">Inline Style</p>
+            <div class="external-class-example" style="width: 300px; height: 120px; background-color: red; border: 10px solid blue;"></div>
+        </div>
+        
+        <div class="example">
+            <p>External Style</p>
+            <div class="external-class-example"></div>
+        </div>
+        
+        <div class="example">
+            <p>ID</p>
+            <div class="external-class-example" id="id-example"></div>
+        </div>
+        
+        <div class="example descendant-example">
+            <p>This is an example illustrating descendants.</p>
+            <p>All of the paragraph tags within the descendant example should have blue text.</p>
+            But, this text should not be blue, because it is not in a paragraph tag.
+            <div>
+                <p>However, this should be blue, even though it is within another div, because it still applies to the descendant rule.</p>
+            </div>
+        </div>
+
+        <div class="example child-example">
+            <p>This is an example illustrating child descendants.</p>
+            <p>All of the paragraph tags within the descendant example should have blue text.</p>
+            But, this text should not be blue, because it is not in a paragraph tag.
+            <div>
+                <p>This should also not be blue, even though it is a descendant, because it is not a child.</p>
+            </div>
+        </div>
+
+        <div class="example adjacent-sibling-example">
+            <p>This is an example illustrating adjacent sibling selectors. My background color is the same as the other paragraph elements.</p>
+            <p>But mine should be blue.</p>
+            <p>Mine should be blue too, because I also immediately follow a paragraph tag.</p>
+            <hr />
+            <p>My background should be back to normal again...</p>
+            <p>Feeling blue all over again.</p>
+        </div>
+
+        <div class="example general-sibling-example">
+            <p>This is an example illustrating general sibling selectors. My background color is the same as the other paragraph elements.</p>
+            <span>My background color should be the same because I am a span tag, not a paragraph.</span>
+            <p>But mine should be blue.</p>
+            <p>Mine should be blue too, because I also am a general sibling of the span tag.</p>
+            <hr />
+            <p>I'm blue too, because I am a general sibling.</p>
+            <p>We are all blue siblings. Sort of like Smurfs.</p>
+        </div>
+
+        <div class="example pseudo-class-example">
+            <p class="happy">If you're happy and you know it,</p>
+            <p class="clap-your-hands">Clap your hands!! :D</p>
+        </div>
+
+        <div class="example box-sizing-example">
+            <div class="first-example">
+                <p>Parent container</p>
+                <div class="child">
+                    <p>Child container</p>
+                </div>
+            </div>
+            <div class="second-example">
+                <p>Parent container</p>
+                <div class="child">
+                    <p>Child container</p>
+                </div>
+            </div>
+            <div class="third-example">
+                <p>Parent container</p>
+                <div class="child">
+                    <p>Child container</p>
+                </div>
+            </div>
+
+            Courtesy of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">developer.mozilla.org</a>.
+        </div>
+
+        <div class="example flexbox-example">
+            <div class="column column-1">
+                <p>Column 1</p>
+            </div>
+            <div class="column column-2">
+                <p>Column 2</p>
+            </div>
+            <div class="column column-3">
+                <p>Column 3</p>
+                <p>And I have a lot to say inside of this element.</p>
+            </div>
+        </div>
+
+        <div class="example">
+            <div class="example-position">
+                <div class="box example-top">
+                    Top
+                </div>            
+                <div class="box example-bottom">
+                    Bottom
+                </div>
+            </div>
+        </div>
+
+        <div class="example float-example">
+            <div class="row">
+                <div class="right">
+                    RIGHT
+                </div>
+                <div class="left">
+                    LEFT
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- .container -->
+</body>
+</html>

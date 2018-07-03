@@ -1,0 +1,145 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    color: #000;
+    font-size: 1.2em;
+}
+
+div .example {
+    border: 1px solid gray;
+    margin: 10px;
+    padding: 20px;
+}
+
+.adjacent-sibling-example p + p {
+    background-color: cornflowerblue;
+}
+
+.general-sibling-example span ~ p {
+    background-color: cornflowerblue;
+}
+
+.box-sizing-example > div {
+    width: 220px;
+    height: 200px;
+    border: solid 10px #ffc129;
+    margin: .8em;
+}
+
+.box-sizing-example .first-example .child {
+    height: 60px;
+    margin: 2em auto;
+    background-color: rgba(229,232,252,.6);
+    box-sizing: content-box;
+    width: 100%;
+}
+
+.box-sizing-example .second-example .child,
+.box-sizing-example .third-example .child {
+    width: 100%;
+    border: solid #5B6DCD 10px;
+    padding: 5px;
+}
+
+.box-sizing-example .second-example .child {
+    box-sizing: content-box;
+}
+
+.box-sizing-example .third-example .child {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    width: 75%;
+}
+
+.child-example, 
+.descendant-example {
+    width: 350px;
+}
+
+.child-example > p, 
+.descendant-example p {
+    color: blue;
+}
+
+.clap-your-hands, 
+.pseudo-class-example:hover .happy {
+    display: none;
+}
+
+.pseudo-class-example:hover .clap-your-hands {
+    display: block;
+}
+
+.flexbox-example {
+    display: flex;
+}
+
+.flexbox-example .column {
+    flex: 1;
+    border: 2px solid cornflowerblue;
+}
+
+.flexbox-example .column-2 {
+    flex: 4;
+}
+
+.float-example {
+    float: left;
+}
+
+.float-example .row {
+    width: 100%;
+    height: 100%;
+    border: 3px solid gray;
+    float: left;
+}
+
+.float-example .row .right {
+    float: right;
+    width: 100px;
+    background: red;
+}
+
+.float-example .row .left {
+    float: left;
+    width: 100px;
+    background: aqua;
+}
+
+.example-position {
+    width: 100%;
+    /* height: 200px; */
+}
+
+.example-position .box {
+    border: 15px solid orange;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.example-position .example-bottom {
+    bottom: 10px;
+    left: 100px;
+}
+
+.example-position .example-top {
+    top: 25px;
+}
+
+.external-class-example {
+    width: 100px;
+    height: 300px;
+    background-color: aqua;
+    border: 10px solid orange;
+}
+
+#id-example {
+    height: 100px;
+    background-color: blue;
+}
