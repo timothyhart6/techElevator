@@ -41,4 +41,9 @@ public class SiteController {
 		request.setAttribute("topic", forumDao.getForumTopicById(id));
 		return "forum/forumDetail";
 	}
+	
+	@RequestMapping("/ourPage")
+	public String showOurPage() {
+		return "ourPage";
+	}
 }

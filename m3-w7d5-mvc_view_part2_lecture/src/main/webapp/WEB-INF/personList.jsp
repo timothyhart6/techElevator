@@ -15,12 +15,28 @@
 			</tr>
 			<c:forEach var="person" items="${personList}">
 				<tr>
-					<td>${person.firstName}</td>
+					<td><c:out value="${person.firstName}" /></td>
 					<td>${person.lastName}</td>
 					<td>${person.age}</td>
 					<td>${person.adult}</td>
 				</tr>
 			</c:forEach>
 		</table>
+		
+		<div>
+			This is a single Person object:  ${mike.firstName} ${mike.lastName} ${mike.age}
+		
+		</div>
+		<br />
+		<br />
+		<br />
+		<div>
+			<c:forEach var="herd" items="${herds}">
+				${herd.key} :::: ${herd.value}<br />
+			</c:forEach>
+			<br />
+			<br />
+			<h1>A group of Lions is a ${herds.Lion}</h1>
+		</div>
 	</body>
 </html>

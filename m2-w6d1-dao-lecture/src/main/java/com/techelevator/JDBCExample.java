@@ -63,7 +63,7 @@ public class JDBCExample {
 		/* The solution to the problem of building dynamic SQL statements is to use a PreparedStatement */
 		
 		/* a parameterized SQL statement uses the '?' character as a placeholder for dynamic parameters */
-		String sqlMoviesByActorParameterized = "SELECT film.title "+
+		String sqlMoviesByActorParameterized = "SELECT film.title " +
 				  "FROM film join film_actor on film.film_id = film_actor.film_id "+
 				  "JOIN actor on actor.actor_id = film_actor.actor_id "+
 				  "WHERE actor.first_name = ? "+
@@ -113,10 +113,12 @@ public class JDBCExample {
 		deleteMarcOMalleyStmt.executeUpdate();
 		
 		conn.commit();
+
 		
 		/* Marc O'Malley rises again! */
 		insertActorStmt.executeUpdate();
 		
 		conn.commit();
+	
 	}
 }
