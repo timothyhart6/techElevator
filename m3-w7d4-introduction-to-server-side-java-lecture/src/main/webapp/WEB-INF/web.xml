@@ -13,11 +13,21 @@
     <servlet-class>com.techelevator.HelloServlet</servlet-class>
   </servlet>
   
+  <servlet>
+      <servlet-name>clockServlet</servlet-name>
+      <servlet-class>com.techelevator.ClockServlet</servlet-class>
+  </servlet>
+  
   <!-- The <servlet-mapping> element tells the container which HTTP requests should
   be mapped to (i.e. handled by) our Servlet -->
   <servlet-mapping>
     <servlet-name>helloServlet</servlet-name> <!-- must match the name from the <servlet> element -->
     <url-pattern>/greeting</url-pattern> <!-- resource path relative to the application context -->
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>clockServlet</servlet-name> <!-- must match the name from the <servlet> element -->
+    <url-pattern>/what-time-is-it</url-pattern> <!-- resource path relative to the application context -->
   </servlet-mapping>
   
 </web-app>
