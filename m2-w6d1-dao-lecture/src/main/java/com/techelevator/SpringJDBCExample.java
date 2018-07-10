@@ -33,7 +33,7 @@ public class SpringJDBCExample {
 		 * Any following parameters are used to replace query placeholders (i.e. '?') in the order in which they appear */
 		String category = "Comedy";
 		SqlRowSet results = dvdstoreJdbcTemplate.queryForRowSet(sqlFilmsByCategory, category);
-		
+	
 		System.out.println(category+" Films:");
 		while(results.next()) {  // The "next" method advances the cursor to the next row.  If a row exists, it returns true, otherwise false
 			String filmTitle = results.getString("title");  // this is the title column from teh SELECT statment above

@@ -2,10 +2,10 @@ Little League Chew|4
 Triplemint|11
 Potato Crisps|8
 Moonpie|1
-Cola|2
+Cola|4
 Heavy|1
 Stackers|1
-U-Chews|1
+U-Chews|3
 Cowtales|1
 Mountain Melter|1
 Cloud Popcorn|1
@@ -14,4 +14,4 @@ Rowlets|1
 Update Cola|1
 Postgres Chips|1
 
-**TOTAL SALES** $59.10
+**TOTAL SALES** $63.30
