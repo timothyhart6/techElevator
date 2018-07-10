@@ -62,9 +62,11 @@ public class JDBCCityDAOIntegrationTest {
 	
 	@Test
 	public void save_new_city_and_read_it_back() throws SQLException {
+		
 		City theCity = getCity("SQL Station", "South Dakota", "USA", 65535);
 		
 		dao.save(theCity);
+		
 		City savedCity = dao.findCityById(theCity.getId());
 		
 		assertNotEquals(null, theCity.getId());

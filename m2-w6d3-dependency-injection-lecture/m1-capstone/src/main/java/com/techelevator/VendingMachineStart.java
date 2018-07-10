@@ -8,6 +8,7 @@ import com.techelevator.file.log.TextLogWriter;
 import com.techelevator.file.report.JdbcSalesReportWriter;
 import com.techelevator.file.report.ReportWriter;
 import com.techelevator.file.report.SalesReportWriter;
+import com.techelevator.inventory.reader.CardInventoryReader;
 import com.techelevator.inventory.reader.CsvInventoryReader;
 import com.techelevator.inventory.reader.InventoryReader;
 import com.techelevator.view.Menu;
@@ -39,9 +40,9 @@ public class VendingMachineStart {
 		/*
 		 * Original Inventory CSV File Reader, Text File log writer, and Text file Sales Report Writer
 		 */
-		InventoryReader reader = new CsvInventoryReader();
+		//InventoryReader reader = new CsvInventoryReader();
 		LogWriter logWriter = new TextLogWriter();
-		ReportWriter salesReportWriter = new SalesReportWriter();
+		//ReportWriter salesReportWriter = new SalesReportWriter();
 
 		
 
@@ -49,10 +50,10 @@ public class VendingMachineStart {
 		 * JDBC version of the Inventory Reader, Log Writer, and Sales Writer.  These classes read/write from the 
 		 * vendingmachine database instead of a text file.
 		 */
-//		InventoryReader reader = new com.techelevator.inventory.reader.JdbcInventoryReader(dataSource);
-//		LogWriter logWriter = new JDBCLogWriter(dataSource);
-//		ReportWriter salesReportWriter = new JdbcSalesReportWriter(dataSource);
-		
+		//InventoryReader reader = new com.techelevator.inventory.reader.JdbcInventoryReader(dataSource);
+		//LogWriter logWriter = new JDBCLogWriter(dataSource);
+		ReportWriter salesReportWriter = new JdbcSalesReportWriter(dataSource);
+		InventoryReader reader = new CardInventoryReader();
 		
 		/*
 		 *  Injects the Menu, Inventory Reader, Log Writer, and Sales Writer that we wish to use.  Any combination can be used.
