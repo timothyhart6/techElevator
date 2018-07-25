@@ -1,0 +1,89 @@
+h1 {
+    font-size: 2em;
+}
+
+input[type='text'] {
+    padding: 2px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+input[type='checkbox'] {
+    
+    transform: scale(1.2)
+}
+
+.content { 
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.box {    
+    width: 300px;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin: 20px;        
+    transition: all 0.5s ease;
+}
+
+.box.selected { 
+    transition: all .5s ease;
+}
+
+/*.box:hover {
+    transform: scale(1.25);
+}*/
+
+.box div { 
+    margin-top: 10px;
+}
+
+.red {
+    background-color: #ea4335;
+    /*color: #fff;*/
+}
+
+.green {
+    background-color: #34a853;
+}
+
+.blue {
+    background-color: #4285F4;
+    /*color: #FFF;*/
+}
+
+.yellow {
+    background-color: #FBBC05;
+}
+
+.steelblue {
+    background-color: lightsteelblue;    
+}
+
+.grey {
+    background-color: #808080;
+}
+
+
+.grow {    
+    transform: scale(1.1);
+}
+
+.shrink { 
+    transform: scale(0.85); 
+}
+
+.shadow { 
+    box-shadow: 10px 10px;
+}
+
+.complete { 
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.selected {
+    border: 5px dashed #000000;
+    
+}
