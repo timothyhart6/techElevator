@@ -1,34 +1,34 @@
 ﻿// EVENTS
 $(function () {
     //1. When the blue box is clicked, toggle the grow class
-    $(".box").on("click", function (e) {
-        $(".box").toggleClass("grow");
-    });
+    // $(".box").on("click", function (e) {
+    //     $(".box").toggleClass("grow");
+    // });
 
     //2. When any box is selected, toggle the selected class - comment out the event in #1
-    $(".box").on("click", function (e) {
-        $(this).toggleClass("grow");
-    });
+    // $(".box").on("click", function (e) {
+    //     $(this).toggleClass("grow");
+    // });
 
     //3. Wire up 1,2,3,4,5,6 to toggle selected on the divs
     // reference: http://keycode.info/ for keyCodes
-    $("body").on("keypress", function (e) {
-        
-        if (e.keyCode === 49) {
-            $(".red").toggleClass("grow");
-        } else if (e.keyCode === 50) {
-            $(".blue").toggleClass("grow");
-        } else if (e.keyCode === 51) {
-            $(".yellow").toggleClass("grow");
-        } else if (e.keyCode === 52) {
-            $(".green").toggleClass("grow");
-        } else if (e.keyCode === 53) {
-            $(".grey").toggleClass("grow");
-        } else if (e.keyCode === 54) {
-            $(".steelblue").toggleClass("grow");
-        }
+    // $("body").on("keypress", function (e) {
+       
+    //     if (e.keyCode === 49) {
+    //         $(".red").toggleClass("grow");
+    //     } else if (e.keyCode === 50) {
+    //         $(".blue").toggleClass("grow");
+    //     } else if (e.keyCode === 51) {
+    //         $(".yellow").toggleClass("grow");
+    //     } else if (e.keyCode === 52) {
+    //         $(".green").toggleClass("grow");
+    //     } else if (e.keyCode === 53) {
+    //         $(".grey").toggleClass("grow");
+    //     } else if (e.keyCode === 54) {
+    //         $(".steelblue").toggleClass("grow");
+    //     }
 
-    });
+    // });
 
     //4. Gradually make the textbox and checkboxes more interactive
 	//   This example is more involved and demonstrates the complexity of a simple to-do list.
@@ -39,19 +39,20 @@ $(function () {
     // - Allow the X span to be clicked to delete a row
     // - Add a Confirmation to the delete
     
-    //$(".steelblue input[type='text']").on("keypress", handleEnter);
+    $(".steelblue input[type='text']").on("keypress", handleEnter);
    
-    //$(".steelblue input[type='checkbox']").on("change", handleCheckmarkChange);
+    $(".steelblue input[type='checkbox']").on("change", handleCheckmarkChange);
 
-    //$(".steelblue label").on("click", onLabelClick);
+    $(".steelblue label").on("click", onLabelClick);
  
-    //$(".steelblue span").on("click", deleteRow);
+    $(".steelblue span").on("click", deleteRow);
 });      
 
 
 function deleteRow(e) {
-
-    $(this).parent().remove();
+    if (confirm("Are you sure?")) {
+        $(this).parent().remove();
+    }
  
 }
 

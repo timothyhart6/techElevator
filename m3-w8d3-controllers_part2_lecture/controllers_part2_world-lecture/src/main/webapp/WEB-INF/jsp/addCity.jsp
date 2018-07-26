@@ -11,11 +11,11 @@
 <c:url var="addCityWithPostAndRedirectUrl" value="/addCityWithPostAndRedirect" />
 
 
-<form action="${addCityUrl}" method="GET">
 <!-- form action="${addCityUrl}" method="POST" -->
-<!-- form action="${addCityWithRequestParamsUrl}" method="POST" -->
-<!-- form action="${addCityWithBindingUrl}" method="POST" -->
-<!-- form action="${addCityWithPostAndRedirectUrl}" method="POST"-->
+<!-- form action="${addCityUrl}" method="POST" -->
+<!--  form action="${addCityWithRequestParamsUrl}" method="POST" -->
+<!--  form action="${addCityWithBindingUrl}" method="POST" -->
+<form action="${addCityWithPostAndRedirectUrl}" method="POST">
 <!-- form action="${addCityWithPostWithModelMap}" method="POST" -->
 	<label for="name">Name:</label>
 	<input type="text" name="name" /><br />

@@ -17,7 +17,7 @@ public class CityController {
 
 	@Autowired
 	private CityDAO cityDao;
-	
+
 	@RequestMapping(path="/", method=RequestMethod.GET)
 	public String showAddCity(HttpServletRequest request) {
 		request.setAttribute("methodUsed", "GET");
@@ -80,13 +80,13 @@ public class CityController {
 	 */
 	@RequestMapping(path="/addCityWithRequestParams", method=RequestMethod.POST)
 	public String addNewCityByPost(HttpServletRequest request, @RequestParam String name, 
-			@RequestParam String district, @RequestParam int population) {
+			@RequestParam(name="district") String state, @RequestParam int population, @RequestParam(required=false) String notRequired) {
 		
 		request.setAttribute("methodUsed", "POST-RequestParams");		
 		City newCity = new City();
 		newCity.setCountryCode("USA");
 		newCity.setName(name);
-		newCity.setDistrict(district);
+		newCity.setDistrict(state);
 		newCity.setPopulation(population);
 		
 		cityDao.save(newCity);
@@ -123,16 +123,19 @@ public class CityController {
 		
 		newCity.setCountryCode("USA");	
 		cityDao.save(newCity);
-		
-		request.setAttribute("cities", cityDao.findCityByCountryCode("USA"));		
-		
+			
 		/*
 		 * Instead of returning a view name, we can return redirect:<controller request mapping> to redirect to
 		 * a GET and keep the form from submitting again on a refresh
 		 */
-		return "redirect:/";  
+		return "redirect:/thankyou";  
 	}
 	
+	
+	@RequestMapping(path="/thankyou", method=RequestMethod.GET)
+	public String showThankYou() {
+		return "thankYou";
+	}
 	
 	/*
 	 * Adding a new City using a POST-REDIRECT-GET - Parameters passed in message body
@@ -148,8 +151,7 @@ public class CityController {
 		
 		newCity.setCountryCode("USA");	
 		cityDao.save(newCity);
-		
-		map.addAttribute("cities", cityDao.findCityByCountryCode("USA"));		
+	
 		
 		/*
 		 * Instead of returning a view name, we can return redirect:<controller request mapping> to redirect to

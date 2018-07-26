@@ -1,7 +1,17 @@
 /* #########################################
 Function Expressions and Anonymous Functions
 ######################################### */
+function evenNumbers(num) {
+    return num % 2 == 0;
+}
 
+function oddNumbers(a) {
+    return a % 2 != 0;
+}
+
+function ourNumbers(doug) {
+    return doug > 2 && doug < 8;
+}
 //We've seen function declarations that allow us to write reusable code like this: 
 
 function speak(numberOfTimes) {
@@ -33,27 +43,35 @@ var thinkHappyThoughts = fly;
 
 thinkHappyThoughts(20);
 
-function filter(things, matcher) {
+function filter(things, b) {
     var results = [];
     for(var i = 0; i < things.length; i++) {
-        if(matcher(things[i])) {
+        if(b(things[i])) {
             results.push(things[i]);
         }
     }
     return results;
 }
 
-function evenNumbers(num) {
-    return num % 2 == 0;
-}
 
-function oddNumbers(num) {
-    return num % 2 != 0;
-}
 
-var input = [1,2,3,4,5,6,7,8,9];
+var input = ['1','2','3','4','5','6','7','8','9'];
 
 console.log(filter(input, evenNumbers));
 console.log(filter(input, oddNumbers));
+console.log(filter(input, ourNumbers));
+console.log(filter(input, function(num){
+    return num > 4;
+}));
 
+function sumArray() {
+    let arr = [1, 2, 3, 4];
+    let sum = 0;
 
+    arr.forEach(function(element) {
+        if (element %2 == 0) {
+            sum += element;
+        }
+    }); 
+    console.log(sum);
+}

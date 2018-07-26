@@ -4,7 +4,6 @@ function growBox1() {
     //var box1 = $("#box1");
     //box1.addClass("grow");
     $("#box1").addClass("grow");
-
 }
 
 //2. Write a function that finds and

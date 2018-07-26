@@ -56,7 +56,7 @@ public class CityController {
 		newCity.setCountryCode("USA");	
 		cityDao.save(newCity);
 		
-		//attr.addFlashAttribute("city", newCity);
+		attr.addFlashAttribute("city", newCity);
 		return "redirect:/addCityResult";  
 	}
 	

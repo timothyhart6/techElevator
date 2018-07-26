@@ -11,6 +11,7 @@ function variables() {
     console.log(`There are ${daysPerWeek} days in the week.`);
 
     let daysPerMonth = 30;  //declres a variable where value can be changed
+    daysPerMonth = "thirty";
     console.log(`There are ${daysPerMonth} days in the month.`);
 
     const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -27,9 +28,9 @@ function printParameters(param1, param2) {
 
 function equality(x, y) {
 
-    console.log(`x is ${typeof x}`);
-    console.log(`y is ${typeof y}`);
-
+    console.log(`x ${x} is ${typeof x}`);
+    console.log(`y ${y} is ${typeof y}`);
+   
     console.log(`x == y : ${x == y}`);      // true
     console.log(`x === y : ${x === y}`);    // false
 }
@@ -55,7 +56,7 @@ function objects() {
             return `${this.lastName}, ${this.firstName} (${this.age})`;
         }
     };
-
+person.firstName = "Doug";
     console.table(person);
 
     console.log(`${person.firstName} ${person.lastName}`);

@@ -39,7 +39,7 @@ public class HelloController {
 		
 		return "homePage";
 	}
-		
+
 	@RequestMapping("/greeting")
 	/* If you need a reference to the HttpServletRequest object in the 
 	 * handler method, just add a method parameter of type 

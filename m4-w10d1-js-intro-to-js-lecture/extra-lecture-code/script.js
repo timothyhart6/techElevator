@@ -142,8 +142,9 @@ console.log("isNaN(NaN) : " + isNaN(NaN)); //true
 console.log("isNaN(0/0) : " + isNaN(0 / 0)); //true
 
 // parseFloat - Parses a string argument and returns a floating point number                            
-console.log("3.25 === parseFloat('3.25') : " + (3.25 === parseFloat('3.25')));
-
+console.log("3.25 === parseFloat('3.25') : " + (3.25 === parseFloat('test')));
+console.log(parseFloat('test'));
+console.log(2 + parseFloat('test'));
 //parseInt - Parses a string argument and returns an integer number representing that string         
 console.log("15 === parseInt('15') : " + (15 === parseInt('15')));
 
@@ -290,8 +291,13 @@ console.log(groceries);
 groceries[10] = "Cheese";
 console.log("Length is " + groceries.length);   //??????
 console.log(groceries);                         //What is that thing 10 showing up for like that in the output?
+console.table(groceries);
 
 groceries.length = 2;
+console.log("Length is " + groceries.length);
+console.log(groceries);
+
+groceries.length = 10;
 console.log("Length is " + groceries.length);
 console.log(groceries);
 

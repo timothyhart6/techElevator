@@ -22,7 +22,7 @@ import com.techelevator.dao.model.User;
 
 @Controller
 //@SessionAttributes("user") // Example of single Session value
-//@SessionAttributes({"user", "bgClass"})   // Example of multiple session values
+@SessionAttributes({"user", "bgClass"})   // Example of multiple session values
 public class CityController {
 
 	@Autowired
@@ -80,9 +80,10 @@ public class CityController {
 	public String doLogout(HttpSession session, ModelMap map) {
 		
 		session.invalidate();
-		map.addAttribute("bgClass", "white");
 		map.clear();
 		
+		
+		map.addAttribute("bgClass", "white");
 		return "redirect:/";
 	}
 	

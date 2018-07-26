@@ -23,12 +23,14 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
   
+  
   <!-- This maps all application requests to the Spring DispatcherServlet -->
   <servlet-mapping>
     <servlet-name>springmvc</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 	
+
   <!--   
   The problem with with the DispatcherServlet mapping above is that it will also be 
   invoked for requests for static resources like CSS files and images.  Every 

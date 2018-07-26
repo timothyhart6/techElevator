@@ -12,6 +12,7 @@
 <form:form action="${mailingListSignUpUrl}" method="POST" modelAttribute="signup">
 		<!-- form:errors path="*" cssClass="error"/ -->
         <div>
+        
         		<label for="name">Name</label>
         		<form:input path="name"/>
         		<form:errors path="name" cssClass="error"/>
