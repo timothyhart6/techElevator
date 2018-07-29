@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale:1" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+    <script type="text/javascript" src="numberfacts.js"></script>  
+
+    <style>
+        .rowMargin {
+            margin-top: 50px;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number Facts API</h1>
+    <button id="randomButton" class="btn btn-primary">
+        Random Number Fact
+    </button>
+    <input type="text" id="number" />
+    <button id="numberButton" class="btn btn-primary">
+        Number Fact
+    </button>
+    <div class="container">
+        <div class="row rowMargin">
+			<div class="col-xs-2"></div>
+			<div class="col-xs-8 center">
+			    <h1 id="numberReturned"></h1>
+            </div>
+            <div class="col-xs-2"></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2"></div>
+			<div class="col-xs-8 center">
+			    <h4 id="message"></h4>
+            </div>
+            <div class="col-xs-2"></div>
+		</div>
+    </div>
+
+    
+ 
+
+</body>
+</html>

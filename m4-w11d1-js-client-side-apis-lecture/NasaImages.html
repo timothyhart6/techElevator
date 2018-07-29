@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale:1" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+    <script type="text/javascript" src="nasaimages.js"></script>  
+
+    <style>
+        .rowMargin {
+            margin-top: 50px;
+        }
+        .center {
+            text-align: center;
+        }
+        img {
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>NASA Astronomy Picture of the Day (APOD) API</h1>
+    <button id="randomButton" class="btn btn-primary">
+        Get Random Image
+    </button>
+    <div class="container">
+        <div class="row rowMargin">
+			<div class="col-xs-8 center">
+                <img id="img_id" />
+                <p id="copyright"></p>
+            </div>
+			<div class="col-xs-4">
+                <h2 id="title"></h2>
+                <h4 id="date"></h4>
+                <p id="explaination"></p>
+            </div>
+		</div>
+    </div>
+
+    
+ 
+
+</body>
+</html>
